@@ -1,0 +1,40 @@
+{
+  "name": "@falieson/js-util",
+  "version": "1.0.0",
+  "description": "utility scripts @falieson uses in most projects",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "typings": "build/index.d.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "build:watch": "npx tsc --watch",
+    "prepush": "npm-run-all -s build test:smoke",
+    "test": "node test/simple.js",
+    "test:smoke": "npx r2g test"
+  },
+  "devDependencies": {
+    "@types/core-js": "^2.5.2",
+    "@types/node": "^12.12.7",
+    "husky": "^3.0.9",
+    "npm-run-all": "^4.1.5",
+    "r2g": "^0.1.202",
+    "typescript": "^3.7.2"
+  },
+  "author": "Florian Mettetal <florian.mettetal@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Falieson/js-util.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Falieson/js-util/issues"
+  },
+  "homepage": "https://github.com/Falieson/js-util#readme",
+  "keywords": [
+    "utility",
+    "helper",
+    "script",
+    "javascript",
+    "falieson"
+  ]
+}
