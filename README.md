@@ -1,6 +1,6 @@
-# @falieson/js-second
+# @falieson/js-util
 
-Tired of repeating common ms and second calculations throughout your repositories? Let's centralize and harden these ideas with a repo!
+A set of js utilities that @falieson uses in most of his projects.
 
 ## Install
 
