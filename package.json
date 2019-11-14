@@ -1,6 +1,6 @@
 {
   "name": "@falieson/js-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility (array, console, date, math, string) scripts @falieson uses in most projects",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -16,6 +16,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm-run-all build lint:fix",
+      "pre-publish": "npm-run-all -s build -p test:smoke lint",
       "pre-push": "npm-run-all -s build -p test:smoke lint"
     }
   },
@@ -51,7 +52,11 @@
   "homepage": "https://github.com/Falieson/js-util#readme",
   "keywords": [
     "utility",
-    "array", "console", "date", "math", "string",
+    "array",
+    "console",
+    "date",
+    "math",
+    "string",
     "javascript",
     "falieson"
   ]
