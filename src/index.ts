@@ -1,45 +1,47 @@
-'use strict';
-
-
 // ARRAY
-export { // test
+export {
+  // test
   times, // [ ]
   sortByKey, // [ ]
-  sortObjectArray, // [ ]
+  sortObjectArray // [ ]
 } from './array'
 // CONSOLE
-export { // test
+export {
+  // test
   default as console, // [ ]
-  pout, // [ ]
+  pout // [ ]
 } from './console'
 // DATE
-export { // test
+export {
+  // test
   currMinute, // [ ]
   currMinuteInUnix, // [ ]
   currSecondInUnix, // [ ]
   dateDaysAgo, // [ ]
-  dateOffsetBy, // [ ]
+  dateOffsetBy // [ ]
 } from './date'
 // MATH
-export { // test
+export {
+  // test
   averageArr,
   celciusFromFarenheit,
   celciusFromKelvin,
   Counter,
   farenheightFromCelcius,
   farenheitFromKelvin,
-  getRandomArbitrary,
-  getRandomBoolean,
-  getRandomInt,
+  randomBoolean,
+  randomFloat,
+  randomInt,
   isPowerOf2,
   kelvinFromCelcius,
   kelvinFromFarenheit,
   percent,
   sumArr,
-  sumObjectArr,
+  sumObjectArr
 } from './math'
 // STRING
-export { // test
+export {
+  // test
   dashToSpaceUppercase, // [ ]
   niceBytes, // [ ]
   pluralize, // [ ]
@@ -48,7 +50,7 @@ export { // test
   unixString, // [ ]
   uppercaseFirstLetter, // [ ]
   uuid, // [ ]
-  percentComplete, // [ ]
+  percentComplete // [ ]
 } from './string'
 
 export default exports
@@ -56,8 +58,8 @@ export default exports
 // * --- tests --- * //
 export { getDirName } from './smoke-test.helpers'
 
-export const r2gSmokeTest = async () => {
+export const r2gSmokeTest = (): boolean => {
   const Counter = exports.Counter
-  const counter = new Counter({start: 100})
-  return counter() === 101;
+  const counter = new Counter({ start: 100 })
+  return counter() === 101
 }

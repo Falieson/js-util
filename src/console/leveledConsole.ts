@@ -1,4 +1,8 @@
-export default function leveledConsole(message: string, level: string = 'Info') {
-  const initialArgs = Array.prototype.slice.call(arguments, 2)
-  return console.log.apply(console, [`[${level}] ${message}`, ...initialArgs])
+export default function leveledConsole(
+  message: string,
+  level = 'Info',
+  ...rest: any[] // eslint-disable-line @typescript-eslint/no-explicit-any
+): void {
+  // eslint-disable-next-line no-console
+  return console.log([`[${level}] ${message}`, ...rest])
 }

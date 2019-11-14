@@ -1,0 +1,79 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "kentcdodds/possible-errors",
+    "kentcdodds/best-practices",
+    "kentcdodds/es6/possible-errors",
+    "kentcdodds/import",
+    // "kentcdodds/jest",
+    // prettier should be last
+    "prettier",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "prettier/standard"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".ts"]
+      }
+    }
+  },
+  "rules": {
+    "semi": ["off"], // note you must disable the base rule as it can report incorrect errors
+    "@typescript-eslint/semi": ["error", "never"],
+
+    "key-spacing": ["error", {
+        "align": {
+          "afterColon" : true,
+          "beforeColon": false,
+          "on"         : "colon"
+        },
+        "singleLine": {
+          "afterColon" : true,
+          "beforeColon": false
+        }
+      }
+    ],
+    "max-len"        : ["error", 120, 4, { "ignoreComments": true }],
+    "space-before-function-paren": 0,
+    "space-in-parens"            : 2,
+    "no-warning-comments": ["warn", { "terms": ["todo", "fixme"]}],
+    "prettier/prettier": ["error", {
+        "parser": "typescript",
+        "singleQuote": true,
+        "semi": false,
+        "trailing": "all"
+      }
+    ]
+  }
+}
+// "object-curly-newline"         : [
+//   2, {
+//     "ExportDeclaration": {
+//       "minProperties": 3,
+//       "multiline"    : true,
+//     },
+//     "ImportDeclaration": {
+//       "consistent"   : true,
+//       "minProperties": 2,
+//       "multiline"    : true,
+//     },
+//     "ObjectExpression": {
+//       "minProperties": 2,
+//       "multiline"    : true,
+//     },
+//     "ObjectPattern": { "multiline": true },
+//   },
+// ],

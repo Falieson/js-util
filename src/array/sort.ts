@@ -1,8 +1,12 @@
-// tslint:disable no-any
-export function sortByKey(target: Record<string, any>[] = [], key: string, descending: boolean = true) {
-  return target.sort((a, b) => {
-    const _a = key.split('.').reduce((x, y) => x && x[y], a)
-    const _b = key.split('.').reduce((x, y) => x && x[y], b)
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export function sortByKey(
+  target: Record<string, any>[] = [],
+  key: string,
+  descending = true
+): Record<string, any> {
+  return target.sort((a, b): number => {
+    const _a = key.split('.').reduce((x, y): any => x && x[y], a)
+    const _b = key.split('.').reduce((x, y): any => x && x[y], b)
 
     if (descending) {
       if (_a < _b) return -1
@@ -15,10 +19,12 @@ export function sortByKey(target: Record<string, any>[] = [], key: string, desce
   })
 }
 
-
-export function sortObjectArray(data: Record<string, any>[] = [], key: string, descending = false) {
-  return data.sort((a, b) => !descending
-    ? a[key] - b[key]
-    : b[key] - a[key]
-  );
+export function sortObjectArray(
+  data: Record<string, any>[] = [],
+  key: string,
+  descending = false
+): Record<string, any> {
+  return data.sort((a, b): number =>
+    !descending ? a[key] - b[key] : b[key] - a[key]
+  )
 }

@@ -37,11 +37,16 @@ $ yarn @falieson/js-unit
 | date     | date            | dateDaysAgo, dateOffsetBy                                                                                                         | 2             | 0%   |
 | math     | array           | averageArr,  sumArr,  sumObjectArr                                                                                                | 3             | 0%   |
 | math     | Counter         | Counter                                                                                                                           | 1             | 100% |
-| math     | isPowerOf2      |                                                                                                                                   | 1             | 0%   |
+| math     | isPowerOf2      | isPowerOf2                                                                                                                        | 1             | 0%   |
 | math     | percent         | percent                                                                                                                           | 1             | 0%   |
-| math     | random          | getRandomBoolean,  getRandomInt,  getRandomArbitrary                                                                              | 3             | 0%   |
+| math     | random          | randomBoolean,  randomInt,  randomFloat                                                                              | 3             | 0%   |
 | math     | temperature     | celciusFromFarenheit,  farenheightFromCelcius,  kelvinFromCelcius,  celciusFromKelvin,  kelvinFromFarenheit,  farenheitFromKelvin | 6             | 0%   |
 | string   | nicebytes       | niceBytes                                                                                                                         | 1             | 0%   |
 | string   | percentComplete | percentComplete                                                                                                                   | 1             | 0%   |
 | string   | string          | dashToSpaceUppercase,  pluralize,  suuid,  underscoreToSpaceUppercase,  unixString,  uppercaseFirstLetter,  uuid                  | 7             | 0%   |
 | | | | 34 | 1.5% |
+
+## TODOs
+
+- [ ] split up all the functions into their own npm modules like `@falieson/js-util.times`
+- [ ] 100% test coverage

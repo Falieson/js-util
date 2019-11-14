@@ -1,5 +1,5 @@
-export { default as niceBytes } from "./niceBytes";
-export { default as percentComplete } from "./percentComplete";
+export { default as niceBytes } from './niceBytes'
+export { default as percentComplete } from './percentComplete'
 export {
   dashToSpaceUppercase,
   pluralize,
@@ -7,5 +7,5 @@ export {
   underscoreToSpaceUppercase,
   unixString,
   uppercaseFirstLetter,
-  uuid,
-} from "./string";
+  uuid
+} from './string'

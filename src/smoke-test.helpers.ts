@@ -1,3 +1,3 @@
-export const getDirName = ()=> {
-  return __dirname;
-};
+export const getDirName = (): string => {
+  return __dirname
+}

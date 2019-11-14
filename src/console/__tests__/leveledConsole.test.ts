@@ -1,6 +1,6 @@
 // TODO: requires jest
 // import leveledConsole from '../leveledConsole'
-// const lCons: any = leveledConsole // tslint:disable-line no-any
+// const lCons: any = leveledConsole
 
 // describe('leveledConsole(message, level)', () => {
 //   test('works', () => {

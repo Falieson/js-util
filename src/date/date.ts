@@ -1,12 +1,14 @@
-export function dateDaysAgo(days = 1) {
-  const date = new Date()
-  const oneDay = 24 * 60 * 60 * 1000
+import { ms } from '@falieson/js-second'
 
-  return  new Date(date.getTime() - (days * oneDay))
+export function dateDaysAgo(days = 1): Date {
+  return new Date(new Date().getTime() - days * ms.day)
 }
 
 export const dateOffsetBy = ({
-  days=1, // daysBefore
-  hours=0, // daysBefore=1, hoursOffset= 0, minutesOffset= 0
-  minutes=0, // daysBefore=1, hoursOffset= 0, minutesOffset= 0
-} = {}) => dateDaysAgo(days).setHours(hours, minutes, 0)
+  days = 1, // daysBefore
+  hours = 0, // hoursBefore
+  minutes = 0, // minutesBefore
+  seconds = 0, // secondsBefore
+  milliseconds = 0 // msBefore
+} = {}): Date =>
+  new Date(dateDaysAgo(days).setHours(hours, minutes, seconds, milliseconds))

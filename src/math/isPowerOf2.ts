@@ -1,3 +1,4 @@
-export default function isPowerOf2(v: number) {
-  return v && !(v & (v - 1))  // tslint:disable-line no-bitwise
+// https://stackoverflow.com/a/42799320
+export default function isPowerOf2(n: number): boolean {
+  return Math.clz32(n) < Math.clz32(n - 1)
 }

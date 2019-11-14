@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 'use strict';
-const assert = require('assert');
 process.on('unhandledRejection', (reason, p) => {
   // unless we force process to exit with 1, process may exit with 0 upon an unhandledRejection
   console.error(reason);
   process.exit(1);
 });
+const assert = require('assert');
 // * --- end boilterplate --- * //
 
-
+// project
 const { Counter } = require('@falieson/js-util');
 
 // works

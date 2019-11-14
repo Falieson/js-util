@@ -1,13 +1,12 @@
 export default class Counter {
-  constructor({
-    start = 0
-  } = {}) {
-    return (function(n) {
-      return function() {
+  public constructor({ start = 0 } = {}) {
+    const fn = function(n: number): () => number {
+      return function(): number {
         n += 1
         return n
       }
-    }(start))
+    }
+    return fn(start)
   }
 }
 
