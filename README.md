@@ -5,11 +5,11 @@ A set of js utilities that @falieson uses in most of his projects.
 ## Install
 
 ```bash
-$ npm i -S @falieson/js-unit
+$ npm i -S @falieson/js-util
 ```
 
 ```bash
-$ yarn @falieson/js-unit
+$ yarn @falieson/js-util
 ```
 
 ## SUMMARY
